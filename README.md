@@ -31,10 +31,11 @@ Introduction about the design principles that will be useful both in exploratory
 In order to choose an appropriate plot type or method of analysis for your data, you need to understand the types of data you have. One common method divides the data into four levels of measurement:
 
 - **Qualitative or categorical types** (non-numeric types)
- 1. **Nominal data**: pure labels without inherent order (no label is intrinsically greater or less than any other)
- 2. **Ordinal data**: labels with an intrinsic order or ranking (comparison operations can be made between values, but the magnitude of differences are not be well-defined)
+ 1. **Nominal data**: pure labels without inherent order (no label is intrinsically greater or less than any other), Ex. movie Genre "Action, Comedy,.." or countries "Chine, USA, Germany.."
+ 2. **Ordinal data**: labels with an intrinsic order or ranking (comparison operations can be made between values, but the magnitude of differences are not be well-defined) Ex. Letter Grades: A > B > C OR Ranking 1<sup>st</sup> > 2<sup>nd</sup>  > 3<sup>rd</sup> 
 - **Quantitative or numeric types**
- 3. **Interval data**: numeric values where absolute differences are meaningful (addition and subtraction operations can be made)
+Quantitative data take numerical values that allow for mathmetical operations
+ 3. **Interval data**: numeric values where absolute differences are meaningful (addition and subtraction operations can be made) Ex, Years or Tempreature
  4. **Ratio data**: numeric values where relative differences are meaningful (multiplication and division operations can be made)
   All quantitative-type variables also come in one of two varieties: discrete and continuous.
 
