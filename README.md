@@ -48,7 +48,8 @@ Distinguishing between continuous and discrete can be a little tricky – a rule
 
 
 ```
-When exploring your data, the most important thing to consider first is whether your data is qualitative or quantitative. 
+When exploring your data, the most important thing to consider first is 
+whether your data is qualitative or quantitative. 
 
 ```
 
