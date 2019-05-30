@@ -21,11 +21,7 @@
   All together, these libraries will allow you to visualize data in a balance of productivity and flexibility, for both exploratory as well as explanatory analyses.
 
 # Design of Visualizations
-Introduction about the design principles that will be useful both in exploratory and explanatory analysis, different data types and ways of encoding data. You will also learn about properties of visualizations that can impact both the clarity of messaging as well as their accuracy.
-
-- Visuals can be bad if they:
-  - Don't convey the desired message.
-  - Are misleading.
+The important aspects regarding the design of visualizations:
 
 ## The Four Levels of Measurement
 In order to choose an appropriate plot type or method of analysis for your data, you need to understand the types of data you have. One common method divides the data into four levels of measurement:
@@ -49,9 +45,31 @@ Distinguishing between continuous and discrete can be a little tricky – a rule
 
 ```
 When exploring your data, the most important thing to consider first is 
-whether your data is qualitative or quantitative. 
+whether your data is qualitative or quantitative, discrete or continuous.
 
 ```
+
+## Visual Encodings
+Experts and researchers have determined the types of visual patterns that allow humans to best understand certain information. In general, humans are able to best understand data encoded with **positional changes** (differences in x- and y- position) and **length changes** (differences in box heights). </br>
+
+Alternatively, humans struggle with understanding data encoded with **color hue changes** and **area changes**</br>
+
+**Chart junk** refers to all visual elements in charts and graphs that are not necessary to comprehend the information represented on the graph or that distract the viewer from this information.
+
+- Examples of chart junk you saw in this video include:
+  - Heavy grid lines
+  - Unnecessary text
+  - Pictures surrounding the visual
+  - Shading or 3d components
+  - Ornamented chart axes
+
+The **data-ink ratio**, credited to Edward Tufte, is directly related to the idea of chart junk. The more of the ink in your visual that is related to conveying the message in the data, the better.
+
+```
+Limiting chart junk increases the data-ink ratio.
+```
+
+## Design Integrity
 
 
 
