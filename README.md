@@ -70,10 +70,11 @@ Limiting chart junk increases the data-ink ratio.
 ```
 
 ## Design Integrity
+It is key that when you build plots you maintain integrity for the underlying data.</br>
 
+One of the main ways discussed here for looking at data integrity was with the **lie factor**. Lie factor depicts the degree to which a visualization distorts or misrepresents the data values being plotted. The lie factor is the relative change shown in the graphic divided by the actual relative change in the data. Ideally, the lie factor should be 1: any other value means that there is some mismatch in the ratio of depicted change to actual change.
 
-
-
+Flowing Data: [How to Spot Visualization Lies](https://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/)
 
 
 
