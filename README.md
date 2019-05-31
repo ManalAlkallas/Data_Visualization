@@ -89,11 +89,19 @@ Color can both help and hurt a data visualization. Three tips for using color ef
   - When using color, use less intense colors - not all the colors of the rainbow, which is the default in many software applications.
   - Color for communication. Use color to highlight your message and separate groups of interest. Don't add color just to have color in your visualization.
 
-Lessons 3-5: Exploration of Data
-These lessons systematically present core visualizations in exploratory data analysis. Exploration starts with univariate visualizations to identify trends in distribution and outliers in single variables. Bivariate visualizations follow, to show relationships between variables in the data. Finally, multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
+# Exploration of Data (Lessons 3-5:)
+## Univariate visualizations:
+Exploration starts with univariate visualizations to identify trends in distribution and outliers in **single variables**. 
 
-Lesson 6: Explanatory Visualizations
+## Bivariate visualizations
+Bivariate visualizations follow, to show relationships between variables in the data. 
+
+```
+Finally, multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
+```
+
+# Explanatory Visualizations (Lesson 6)
 This lesson describes considerations that should be made when moving from exploratory data analysis to explanatory analysis. When polishing visualizations to present to others, you will need to consider what findings you want to focus on and how to use visualization techniques to highlight your main story. This lesson also provides tips for presentation of results and how to iterate on your presentations.
 
-Lesson 7: Visualization Case Study
+#  Visualization Case Study (Lesson 7)
 In this lesson, you will bring together everything from the previous lessons in an example case study. You will be presented with a dataset and perform an exploratory analysis. You will then take findings from that analysis and polish them up for presentation as explanatory visualizations.
