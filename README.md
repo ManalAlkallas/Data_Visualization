@@ -91,7 +91,14 @@ Color can both help and hurt a data visualization. Three tips for using color ef
 
 # Exploration of Data (Lessons 3-5:)
 ## Univariate visualizations:
-Exploration starts with univariate visualizations to identify trends in distribution and outliers in **single variables**. 
+Exploration starts with univariate visualizations to identify trends in distribution and outliers in **single variables**. </br>
+
+```
+Bar charts for qualitatuve variabes
+Histograms for quantitive variables
+```
+
+
 
 ## Bivariate visualizations
 Bivariate visualizations follow, to show relationships between variables in the data. 
