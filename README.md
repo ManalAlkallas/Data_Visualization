@@ -74,10 +74,20 @@ It is key that when you build plots you maintain integrity for the underlying da
 
 One of the main ways discussed here for looking at data integrity was with the **lie factor**. Lie factor depicts the degree to which a visualization distorts or misrepresents the data values being plotted. The lie factor is the relative change shown in the graphic divided by the actual relative change in the data. Ideally, the lie factor should be 1: any other value means that there is some mismatch in the ratio of depicted change to actual change.
 
-Flowing Data: [How to Spot Visualization Lies](https://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/)
+```
 
+Any lie factor different than 1 suggests that a visual is distorting the data. 
+When the factor is greater than 1, we are making an effect larger than it actually is 
+and factors less than 1 are hiding the magnitude of an effect.
 
+```
+Flowing Data: [How to Spot Visualization Lies](https://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/) </br>
 
+## Using Color
+Color can both help and hurt a data visualization. Three tips for using color effectively.
+  - Before adding color to a visualization, start with black and white.
+  - When using color, use less intense colors - not all the colors of the rainbow, which is the default in many software applications.
+  - Color for communication. Use color to highlight your message and separate groups of interest. Don't add color just to have color in your visualization.
 
 Lessons 3-5: Exploration of Data
 These lessons systematically present core visualizations in exploratory data analysis. Exploration starts with univariate visualizations to identify trends in distribution and outliers in single variables. Bivariate visualizations follow, to show relationships between variables in the data. Finally, multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
