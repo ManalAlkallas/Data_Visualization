@@ -89,7 +89,7 @@ Color can both help and hurt a data visualization. Three tips for using color ef
   - When using color, use less intense colors - not all the colors of the rainbow, which is the default in many software applications.
   - Color for communication. Use color to highlight your message and separate groups of interest. Don't add color just to have color in your visualization.
 
-# Exploration of Data (Lessons 3-5:)
+# Exploration of Data
 ## Univariate visualizations:
 Exploration starts with univariate visualizations to identify trends in distribution and outliers in **single variables**. </br>
 
@@ -133,16 +133,24 @@ plt.axis('square')
 
 ```
 
-[Pie Chart Practice](Pei_Chart_Practice.ipynb)  
+### Histograms
+A histogram is used to plot the distribution of a numeric variable. It's the quantitative version of the bar chart. However, rather than plot one bar for each unique numeric value, values are grouped into continuous bins, and one bar for each bin is plotted depicting the number. For instance, using the default settings for matplotlib's ```hist``` function:
 
+```
+
+plt.hist(data = df, x = 'num_var')
+
+```
+By default, the ```hist``` function divides the data into 10 bins, based on the range of values taken. In almost every case, we will want to change these settings.
+
+[Histogram Chart Practice](Histogram_Practice.ipynb)  
 
 
 ## Bivariate visualizations
 Bivariate visualizations follow, to show relationships between variables in the data. 
 
-```
-Finally, multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
-```
+## Multivariate visualization
+Multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
 
 # Explanatory Visualizations (Lesson 6)
 This lesson describes considerations that should be made when moving from exploratory data analysis to explanatory analysis. When polishing visualizations to present to others, you will need to consider what findings you want to focus on and how to use visualization techniques to highlight your main story. This lesson also provides tips for presentation of results and how to iterate on your presentations.
