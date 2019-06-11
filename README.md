@@ -106,6 +106,7 @@ Bivariate visualizations follow, to show relationships between variables in the 
 ```
 Finally, multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
 ```
+[Bar Chart Practice](Bar_Chart_Practice.ipynb)  
 
 # Explanatory Visualizations (Lesson 6)
 This lesson describes considerations that should be made when moving from exploratory data analysis to explanatory analysis. When polishing visualizations to present to others, you will need to consider what findings you want to focus on and how to use visualization techniques to highlight your main story. This lesson also provides tips for presentation of results and how to iterate on your presentations.
