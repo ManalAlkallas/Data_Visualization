@@ -97,10 +97,10 @@ Exploration starts with univariate visualizations to identify trends in distribu
 Bar charts for qualitatuve variabes
 Histograms for quantitive variables
 ```
-### Bar charts 
+### I. Bar charts 
 [Bar Chart Practice](Bar_Chart_Practice.ipynb)  
 
-### Pie Charts
+### II. Pie Charts
 A **pie chart** is a common univariate plot type that is used to depict relative frequencies for levels of a categorical variable. Frequencies in a pie chart are depicted as wedges drawn on a circle: the larger the angle or area, the more common the categorical value taken.
 - Unfortunately, pie charts are a fairly limited plot type in the range of scenarios where they can be used, and it is easy for chart makers to try and spice up pie charts in a way that makes them more difficult to read. If you want to use a pie chart, try to follow certain guidelines:
   - Make sure that your interest is in relative frequencies. Areas should represent parts of a whole, rather than measurements on a second variable (unless that second variable can logically be summed up into some whole).
@@ -120,7 +120,7 @@ plt.axis('square')
 ```
 To follow the guidelines in the bullet points above, I include the "startangle = 90" and "counterclock = False" arguments to start the first slice at vertically upwards, and will plot the sorted counts in a clockwise fashion. The axis function call and 'square' argument makes it so that the scaling of the plot is equal on both the x- and y-axes. Without this call, the pie could end up looking oval-shaped, rather than a circle.
 
-### Additional Variation
+### III. Additional Variation
 A sister plot to the pie chart is the **donut plot**. It's just like a pie chart, except that there's a hole in the center of the plot. Perceptually, there's not much difference between a donut plot and a pie chart, and donut plots should be used with the same guidelines as a pie chart. Aesthetics might be one of the reasons why you would choose one or the other. For instance, you might see statistics reported in the hole of a donut plot to better make use of available space.
 
 To create a donut plot, you can add a "wedgeprops" argument to the pie function call. By default, the radius of the pie (circle) is 1; setting the wedges' width property to less than 1 removes coloring from the center of the circle.
@@ -133,7 +133,7 @@ plt.axis('square')
 
 ```
 
-### Histograms
+### IV. Histograms
 A histogram is used to plot the distribution of a numeric variable. It's the quantitative version of the bar chart. However, rather than plot one bar for each unique numeric value, values are grouped into continuous bins, and one bar for each bin is plotted depicting the number. For instance, using the default settings for matplotlib's ```hist``` function:
 
 ```
@@ -152,8 +152,8 @@ Bivariate visualizations follow, to show relationships between variables in the 
 ## 3. Multivariate visualization
 Multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
 
-# Explanatory Visualizations (Lesson 6)
+## 4. Explanatory Visualizations
 This lesson describes considerations that should be made when moving from exploratory data analysis to explanatory analysis. When polishing visualizations to present to others, you will need to consider what findings you want to focus on and how to use visualization techniques to highlight your main story. This lesson also provides tips for presentation of results and how to iterate on your presentations.
 
-#  Visualization Case Study (Lesson 7)
+#  Visualization Case Study
 In this lesson, you will bring together everything from the previous lessons in an example case study. You will be presented with a dataset and perform an exploratory analysis. You will then take findings from that analysis and polish them up for presentation as explanatory visualizations.
