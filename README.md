@@ -90,7 +90,7 @@ Color can both help and hurt a data visualization. Three tips for using color ef
   - Color for communication. Use color to highlight your message and separate groups of interest. Don't add color just to have color in your visualization.
 
 # Exploration of Data
-## Univariate visualizations:
+## 1. Univariate visualizations:
 Exploration starts with univariate visualizations to identify trends in distribution and outliers in **single variables**. </br>
 
 ```
@@ -146,10 +146,10 @@ By default, the ```hist``` function divides the data into 10 bins, based on the 
 [Histogram Chart Practice](Histogram_Practice.ipynb)  
 
 
-## Bivariate visualizations
+## 2. Bivariate visualizations
 Bivariate visualizations follow, to show relationships between variables in the data. 
 
-## Multivariate visualization
+## 3. Multivariate visualization
 Multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
 
 # Explanatory Visualizations (Lesson 6)
