@@ -176,6 +176,57 @@ By default, the ```hist``` function divides the data into 10 bins, based on the 
 [Histogram Chart Practice](Histogram_Practice.ipynb)  
 
 
+### Figures, Axes, and Subplots
+The base of a visualization in matplotlib is a [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html) object. Contained within each Figure will be one or more [Axes](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html) objects, each Axes object containing a number of other elements that represent each plot. In the earliest examples, these objects have been created implicitly. Let's say that the following expression is run inside a Jupyter notebook to create a histogram:
+```
+plt.hist(data = df, x = 'num_var')
+```
+Since we don't have a Figure area to plot inside, Python first creates a Figure object. And since the Figure doesn't start with any Axes to draw the histogram onto, an Axes object is created inside the Figure. Finally, the histogram is drawn within that Axes.
+
+This hierarchy of objects is useful to know about so that we can take more control over the layout and aesthetics of our plots. One alternative way we could have created the histogram is to explicitly set up the Figure and Axes like this:
+```
+
+fig = plt.figure()
+ax = fig.add_axes([.125, .125, .775, .755])
+ax.hist(data = df, x = 'num_var')
+
+```
+[figure()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html) creates a new Figure object, a reference to which has been stored in the variable ```fig```. One of the Figure methods is [.add_axes(](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes), which creates a new Axes object in the Figure. The method requires one list as argument specifying the dimensions of the Axes: the first two elements of the list the position of the lower-left hand corner of the Axes (in this case one quarter of the way from the lower-left corner of the Figure) and the last two elements specifying the Axes width and height, respectively. We refer to the Axes in the variable ```ax.``` Finally, we use the Axes method [.hist()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist) just like we did before with ```plt.hist()```.
+
+To use Axes objects with seaborn, seaborn functions usually have an "ax" parameter to specify upon which Axes a plot will be drawn.
+```
+
+fig = plt.figure()
+ax = fig.add_axes([.125, .125, .775, .755])
+base_color = sb.color_palette()[0]
+sb.countplot(data = df, x = 'cat_var', color = base_color, ax = ax)
+
+```
+In the above two cases, there was no purpose to explicitly go through the Figure and Axes creation steps. And indeed, in most cases, you can just use the basic matplotlib and seaborn functions as is. Each function targets a Figure or Axes, and they'll automatically target the most recent Figure or Axes worked with. As an example of this, let's review in detail how [subplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html) was used on the Histograms page:
+```
+
+plt.figure(figsize = [10, 5]) # larger figure size for subplots
+
+# example of somewhat too-large bin size
+plt.subplot(1, 2, 1) # 1 row, 2 cols, subplot 1
+bin_edges = np.arange(0, df['num_var'].max()+4, 4)
+plt.hist(data = df, x = 'num_var', bins = bin_edges)
+
+# example of somewhat too-small bin size
+plt.subplot(1, 2, 2) # 1 row, 2 cols, subplot 2
+bin_edges = np.arange(0, df['num_var'].max()+1/4, 1/4)
+plt.hist(data = df, x = 'num_var', bins = bin_edges)
+
+```
+
+First of all, ```plt.figure(figsize = [10, 5])```creates a new Figure, with the "figsize" argument setting the width and height of the overall figure to 10 inches by 5 inches, respectively. Even if we don't assign any variable to return the function's output, Python will still implicitly know that further plotting calls that need a Figure will refer to that Figure as the active one.
+
+Then, ```plt.subplot(1, 2, 1)``` creates a new Axes in our Figure, its size determined by the ```subplot()``` function arguments. The first two arguments says to divide the figure into one row and two columns, and the third argument says to create a new Axes in the first slot. Slots are numbered from left to right in rows from top to bottom. Note in particular that the index numbers start at 1 (rather than the usual Python indexing starting from 0). (You'll see the indexing a little better in the example at the end of the page.) Again, Python will implicitly set that Axes as the current Axes, so when the ```plt.hist()``` call comes, the histogram is plotted in the left-side subplot.
+
+Finally, ```plt.subplot(1, 2, 2)``` creates a new Axes in the second subplot slot, and sets that one as the current Axes. Thus, when the next``` plt.hist() ``` call comes, the histogram gets drawn in the right-side subplot.
+
+
+
 ## 2. Bivariate visualizations
 Bivariate visualizations follow, to show relationships between variables in the data. 
 
