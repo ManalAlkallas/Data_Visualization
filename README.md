@@ -240,7 +240,10 @@ for i in range(12):
 ```    
 As a special note for the text, the Axes limits are [0,1] on each Axes by default, and we increment the iterator counter ```i``` by 1 to get the subplot index, if we were creating the subplots through ```subplot()```. (Reference: [plt.sca()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.sca.html), [plt.text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html))
 
+### Choosing a Plot for Discrete Data
+If you want to plot a discrete quantitative variable, it is possible to select either a **histogram** or a **bar chart** to depict the data.
 
+The histogram is the most immediate choice since the data is numeric, but there's one particular consideration to make regarding the bin edges. Since data points fall on set values, it can help to reduce ambiguity by putting bin edges between the actual values taken by the data. Your readers may not know that values on bin edges end up in the bin to their right, so this can help remove potential confusion when they interpret the plot. Compare the two visualizations of 100 random die rolls below (in die_rolls), with bin edges _on_ the values in the left subplot, and bin edges in between values in the right subplot.
 
 ## 2. Bivariate visualizations
 Bivariate visualizations follow, to show relationships between variables in the data. 
