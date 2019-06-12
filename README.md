@@ -238,7 +238,7 @@ for i in range(12):
     plt.text(0.5, 0.5, i+1) # print conventional subplot index number to middle of Axes
     
 ```    
-As a special note for the text, the Axes limits are [0,1] on each Axes by default, and we increment the iterator counter i by 1 to get the subplot index, if we were creating the subplots through subplot(). (Reference: plt.sca(), plt.text())
+As a special note for the text, the Axes limits are [0,1] on each Axes by default, and we increment the iterator counter ```i``` by 1 to get the subplot index, if we were creating the subplots through ```subplot()```. (Reference: [plt.sca()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.sca.html), [plt.text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html))
 
 
 
