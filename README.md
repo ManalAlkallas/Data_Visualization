@@ -98,6 +98,36 @@ Bar charts for qualitatuve variabes
 Histograms for quantitive variables
 ```
 ### I. Bar charts 
+A **bar chart** is used to depict the distribution of a categorical variable. In a bar chart, each level of the categorical variable is depicted with a bar, whose height indicates the frequency of data points that take on that level. A basic bar chart of frequencies can be created through the use of seaborn's countplot function:
+```
+
+sb.countplot(data = df, x = 'cat_var')
+
+```
+By default, each category is given a different color.  it's a good idea to simplify the plot and reduce unnecessary distractions by plotting all bars in the same color. This can be set using the "color" parameter:
+
+```
+
+base_color = sb.color_palette()[0]
+sb.countplot(data = df, x = 'cat_var', color = base_color)
+
+```
+```color_palette``` returns a list of RGB tuples. Each tuple consists of three digits specifying the red, green, and blue channel values to specify a color. Calling this function without any parameters returns the current / default palette, and we take the first color to be the color for all bars.
+
+One thing that we might want to do with a bar chart is to sort the data in some way. For nominal-type data, one common operation is to sort the data in terms of frequency. With our data in a pandas DataFrame, we can use various DataFrame methods to compute and extract an ordering, then set that ordering on the "order" parameter:
+```
+base_color = sb.color_palette()[0]
+cat_order = df['cat_var'].value_counts().index
+sb.countplot(data = df, x = 'cat_var', color = base_color, order = cat_order)
+```
+
+You can use matplotlib's ``xticks``` function and its "rotation" parameter to change the orientation in which the labels will be depicted (as degrees counter-clockwise from horizontal):
+```
+base_color = sb.color_palette()[0]
+sb.countplot(data = df, x = 'cat_var', color = base_color)
+plt.xticks(rotation = 90)
+```
+
 [Bar Chart Practice](Bar_Chart_Practice.ipynb)  
 
 ### II. Pie Charts
