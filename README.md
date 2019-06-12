@@ -225,6 +225,21 @@ Then, ```plt.subplot(1, 2, 1)``` creates a new Axes in our Figure, its size dete
 
 Finally, ```plt.subplot(1, 2, 2)``` creates a new Axes in the second subplot slot, and sets that one as the current Axes. Thus, when the next``` plt.hist() ``` call comes, the histogram gets drawn in the right-side subplot.
 
+#### Additional Techniques
+
+If you don't assign Axes objects as they're created, you can retrieve the current Axes using ```ax = plt.gca()```, or you can get a list of all Axes in a Figure ```fig``` by using ```axes = fig.get_axes()```. As for creating subplots, you can use ```fig.add_subplot()``` in the same way as ```plt.subplot()``` above. If you already know that you're going to be creating a bunch of subplots, you can use the ```plt.subplots()``` function:
+
+```
+
+fig, axes = plt.subplots(3, 4) # grid of 3x4 subplots
+axes = axes.flatten() # reshape from 3x4 array into 12-element vector
+for i in range(12):
+    plt.sca(axes[i]) # set the current Axes
+    plt.text(0.5, 0.5, i+1) # print conventional subplot index number to middle of Axes
+    
+```    
+As a special note for the text, the Axes limits are [0,1] on each Axes by default, and we increment the iterator counter i by 1 to get the subplot index, if we were creating the subplots through subplot(). (Reference: plt.sca(), plt.text())
+
 
 
 ## 2. Bivariate visualizations
