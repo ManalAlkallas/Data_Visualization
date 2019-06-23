@@ -253,6 +253,10 @@ Bivariate visualizations follow, to show relationships between variables in the 
 2. **Violin Plots**: for quantitative variable vs. qualitative variable
 3. **Clustered bar charts**: for qualitative variable vs. qualitative variable
 
+### Scatterplots:
+In a scatterplot, the values of one variable are indicated by position on the x/axis and values of the other variable are indicated by the position on the y-axis. One point is plotted for every observation we have in our data resulting in a cloud of points. The pattern of points can clearly show what kind of relation exists between our two variables and its strength.
+
+We are often interested in quantifying the strength of the relationship between two variables through a **correlation coefficient**. The most commenly used measure is the **Pearson correlation coefficient** 
 
 
 ## 3. Multivariate visualization
