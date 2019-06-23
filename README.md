@@ -254,9 +254,50 @@ Bivariate visualizations follow, to show relationships between variables in the 
 3. **Clustered bar charts**: for qualitative variable vs. qualitative variable
 
 ### Scatterplots:
-In a scatterplot, the values of one variable are indicated by position on the x/axis and values of the other variable are indicated by the position on the y-axis. One point is plotted for every observation we have in our data resulting in a cloud of points. The pattern of points can clearly show what kind of relation exists between our two variables and its strength.
+
+
+Scatterplots
+If we want to inspect the relationship between two numeric variables, the standard choice of plot is the scatterplot. In a scatterplot, each data point is plotted individually as a point, its x-position corresponding to one feature value and its y-position corresponding to the second. One basic way of creating a scatterplot is through Matplotlib's [scatter](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html) function:
+
+```
+plt.scatter(data = df, x = 'num_var1', y = 'num_var2')
+
+```
 
 We are often interested in quantifying the strength of the relationship between two variables through a **correlation coefficient**. The most commenly used measure is the **Pearson correlation coefficient** 
+
+We can see a generally positive relationship between the two variables, as higher values of the x-axis variable are associated with greatly increasing values of the variable plotted on the y-axis.
+
+
+#### Alternative Approach
+Seaborn's [regplot](https://seaborn.pydata.org/generated/seaborn.regplot.html) function combines scatterplot creation with regression function fitting:
+```
+sb.regplot(data = df, x = 'num_var1', y = 'num_var2')
+```
+
+The basic function parameters, "data", "x", and "y" are the same for ```regplot``` as they are for matplotlib's ``scatter``.
+
+By default, the regression function is linear, and includes a shaded confidence region for the regression estimate. In this case, since the trend looks like a log(y) ∝ x(y)∝ x relationship (that is, linear increases in the value of x are associated with linear increases in the log of y), plotting the regression line on the raw units is not appropriate. If we don't care about the regression line, then we could set ```reg_fit = False``` in the ```regplot```function call. Otherwise, if we want to plot the regression line on the observed relationship in the data, we need to transform the data.
+
+``
+def log_trans(x, inverse = False):
+    if not inverse:
+        return np.log10(x)
+    else:
+        return np.power(10, x)
+
+sb.regplot(df['num_var1'], df['num_var2'].apply(log_trans))
+tick_locs = [10, 20, 50, 100, 200, 500]
+plt.yticks(log_trans(tick_locs), tick_locs)
+``
+
+The x- and y- values sent to ``regplot`` are set directly as Series, extracted from the dataframe.
+
+
+
+
+
+
 
 
 ## 3. Multivariate visualization
