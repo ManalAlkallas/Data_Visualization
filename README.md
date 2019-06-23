@@ -248,6 +248,13 @@ The histogram is the most immediate choice since the data is numeric, but there'
 ## 2. Bivariate visualizations
 Bivariate visualizations follow, to show relationships between variables in the data. 
 
+- There are 3 major bivariate plots:
+1. **Scatterplots**: for quantitative variable vs. quantitative variable
+2. **Violin Plots**: for quantitative variable vs. qualitative variable
+3. **Clustered bar charts**: for qualitative variable vs. qualitative variable
+
+
+
 ## 3. Multivariate visualization
 Multivariate visualization techniques are presented to identify complex relationships between three or more variables at the same time.
 
